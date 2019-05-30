@@ -1,0 +1,25 @@
+
+<div class="container">
+  <h2 class="text-center" style="color: blue">List Course</h2>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let course of courses">
+      <td class="hidden">{{course.id}}</td>
+      <td>{{course.name}}</td>
+      <td><button class="btn btn-danger" (click)="deleteCourses(course)">Delete</button></td>
+      <td><button class="btn btn-success" (click)="editCourses(course)">Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="form-group">
+    <button type="submit" class="btn btn-outline-success" routerLink="/add-course">Add Course</button>
+  </div>
+</div>
