@@ -6,6 +6,9 @@ import {EditCourseComponent} from './Course/edit-course/edit-course.component';
 import {ListStudentComponent} from './Student/list-student/list-student.component';
 import {AddStudentComponent} from './Student/add-student/add-student.component';
 import {EditStudentComponent} from './Student/edit-student/edit-student.component';
+import {EditEnrollmentComponent} from './Enrollment/edit-enrollment/edit-enrollment.component';
+import {ListEnrollmentComponent} from './Enrollment/list-enrollment/list-enrollment.component';
+import {AddEnrollmentComponent} from './Enrollment/add-enrollment/add-enrollment.component';
 
 const routes: Routes = [
   {path: 'list-student',
@@ -29,6 +32,18 @@ const routes: Routes = [
   {
     path: 'edit-course',
     component: EditCourseComponent
+  },
+  {
+    path: 'list-enrollment',
+    component: ListEnrollmentComponent
+  },
+  {
+    path: 'add-enrollment',
+    component: AddEnrollmentComponent
+  },
+  {
+    path: 'edit-enrollment',
+    component: EditEnrollmentComponent
   }
 ];
 

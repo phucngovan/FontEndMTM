@@ -20,6 +20,7 @@ export class EditStudentComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private router: Router, private studentService: StudentService) { }
 
   ngOnInit() {
+
     this.editForm = this.formBuilder.group({
       id: [''],
       name: ['', [Validators.required, Validators.minLength(4)]],
