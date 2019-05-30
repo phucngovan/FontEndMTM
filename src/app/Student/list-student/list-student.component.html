@@ -1,0 +1,26 @@
+<div class="container">
+  <h2 class="text-center">List Student</h2>
+  <table class="table table-bordered">
+    <thead style="background: bisque">
+    <tr>
+      <th class="hidden">ID</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Delete</th>
+      <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of students">
+      <td class="hidden">{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.phone}}</td>
+      <td><button class="btn btn-danger" (click)="deleteStudents(student)">Delete</button></td>
+      <td><button class="btn btn-success" (click)="editStudents(student)">Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="form-group">
+    <button type="submit" class="btn btn-outline-success" routerLink="/add-student">Add Student</button>
+  </div>
+</div>
